@@ -1,4 +1,4 @@
-import  React from  'react';
+import React from 'react';
 
 
 const Contacts = (props) => {
@@ -14,6 +14,6 @@ const Contacts = (props) => {
             <a href="/rules">правила</a>
         </div>
     );
-}
+};
 
-export  default  Contacts;
+export default Contacts;

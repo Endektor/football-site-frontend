@@ -1,4 +1,4 @@
-import  React from  'react';
+import React from 'react';
 
 
 const Rules = (props) => {
@@ -8,6 +8,6 @@ const Rules = (props) => {
             Правила
         </div>
     );
-}
+};
 
-export  default  Rules;
+export default Rules;

@@ -1,4 +1,4 @@
-import  React from  'react';
+import React from 'react';
 
 
 const Request = (props) => {
@@ -8,6 +8,6 @@ const Request = (props) => {
             Запрос
         </div>
     );
-}
+};
 
-export  default  Request;
+export default Request;
