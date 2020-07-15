@@ -44,10 +44,14 @@ class News extends Component {
             <div>
                 {this.state.teams.map( team =>
                     <div key={team.id}>
-                        <p>{team.id}</p>
-                        <p>{team.name}</p>
-                        <p>{team.games_amount}</p>
-                        <p>{team.wins_amount}</p>
+                        <hr/>
+                        <p>Id команды: {team.id}</p>
+                        <p>название команды: {team.name}</p>
+                        <p>количество игр: {team.games_amount}</p>
+                        <p>победы: {team.wins_amount}</p>
+                        <p>ничьи: {team.draws_amount}</p>
+                        <p>поражения: {team.defeats_amount}</p>
+                        <p>инфомация: {team.description}</p>
                         {console.log(team)}
                     </div>
                 )}

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import TournamentsService from '../../Services/TournamentsService.js';
 import TeamsService from '../../Services/TeamsService.js';
+import Membership from "../Membership/Membership";
 
 const tournamentsService = new TournamentsService();
-const teamsService = new TeamsService();
 
 
 class News extends Component {
@@ -12,7 +12,6 @@ class News extends Component {
         super(props);
         this.state = {
             tournaments: [],
-            teams: [],
             nextPageURL: '',
             previousPageURL: ''
         };
@@ -24,9 +23,6 @@ class News extends Component {
         const self = this;
         tournamentsService.getTournaments().then(function (result) {
             self.setState({ tournaments: result.data, nextPageURL: result.nextlink})
-        });
-        teamsService.getTeams().then(function (result) {
-            self.setState({ teams: result.data})
         });
     }
 
@@ -50,13 +46,20 @@ class News extends Component {
             <div>
                 {this.state.tournaments.map(tournament =>
                     <div key={tournament.id}>
-                        <p>{tournament.id}</p>
-                        <p>{tournament.name}</p>
-                        <p>{tournament.games_amount}</p>
-                        <p>{tournament.members}</p>
-                        {//this.state.tournaments.members[0].map(team_id =>
-                            //<Membership team={this.state.teams.team_id} tournament={tournament.name})}
-                        }
+                        <hr/>
+                        <hr/>
+                        <hr/>
+                        <p>id турнира: {tournament.id}</p>
+                        <p>название турнира: {tournament.name}</p>
+                        {tournament.members.map((team, index) =>
+                            <div>
+                                <hr/>
+                                <p>название команды: {team.name}</p>
+                                <Membership state={tournament.member_detail[index]}/>
+
+                            </div>
+                        )}
+
                         {console.log(tournament)}
                     </div>
                 )}

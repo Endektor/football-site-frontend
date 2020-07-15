@@ -1,33 +1,18 @@
 import React, { Component } from 'react';
-import MembershipsService from '../../Services/MembershipsService';
 
-const membershipsService = new MembershipsService();
 
-class Membership extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            membership: [],
-        };
-    }
-
-    componentDidMount() {
-        const self = this;
-        membershipsService.getMembership(this.props.id).then(function (result) {
-            self.setState({ membership: result.data})
-        });
-    }
-
-    render() {
+const Membership = (props) => {
 
         return (
             <div>
-                {console.log(this.state)}
-                {console.log(this.props.id)}
+                {console.log(props)}
+                <p>количество игр: {props.state.games_amount}</p>
+                <p>победы: {props.state.wins_amount}</p>
+                <p>ничьи: {props.state.draws_amount}</p>
+                <p>поражения: {props.state.defeats_amount}</p>
             </div>
 
         );
-    }
-}
+};
+
 export default Membership;

@@ -10,10 +10,10 @@ class Players extends Component {
         this.state = {
             players: [],
             nextPageURL: '',
-            previousPageURL: ''
+            prevPageURL: ''
         };
         this.nextPage = this.nextPage.bind(this);
-        this.previousPage = this.previousPage.bind(this);
+        this.prevPage = this.prevPage.bind(this);
     }
 
     componentDidMount() {
@@ -31,10 +31,10 @@ class Players extends Component {
         });
     }
 
-    previousPage(){
+    prevPage(){
         const self = this;
-        playersService.getPlayersByURL(this.state.previousPageURL).then((result) => {
-            self.setState({ players: result.data, previousPageURL: result.previouslink})
+        playersService.getPlayersByURL(this.state.prevPageURL).then((result) => {
+            self.setState({ players: result.data, prevPageURL: result.prevlink})
         });
     }
 
@@ -44,13 +44,13 @@ class Players extends Component {
             <div>
                 {this.state.players.map( player =>
                     <div key={player.id}>
-                        <p>{player.id}</p>
-                        <p>{player.name}</p>
-                        <p>{player.last_name}</p>
-                        <p>{player.position}</p>
+                        <p>ID игрока: {player.id}</p>
+                        <p>Имя: {player.first_name}</p>
+                        <p>Фамилия: {player.last_name}</p>
+                        <p>Позиция: {player.position}</p>
                     </div>
                 )}
-                <button onClick={ this.previousPage }>Previous</button>
+                <button onClick={ this.prevPage }>Previous</button>
                 <button onClick={ this.nextPage }>Next</button>
             </div>
         );
