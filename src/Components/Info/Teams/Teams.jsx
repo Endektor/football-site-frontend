@@ -45,6 +45,7 @@ class News extends Component {
                 {this.state.teams.map( team =>
                     <div key={team.id}>
                         <hr/>
+                        <a href={"/teams/" + team.id}>Профиль</a>
                         <p>Id команды: {team.id}</p>
                         <p>название команды: {team.name}</p>
                         <p>количество игр: {team.games_amount}</p>
@@ -53,6 +54,7 @@ class News extends Component {
                         <p>поражения: {team.defeats_amount}</p>
                         <p>инфомация: {team.description}</p>
                         {console.log(team)}
+
                     </div>
                 )}
                 <button onClick={ this.previousPage }>Previous</button>
