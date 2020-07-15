@@ -19,7 +19,7 @@ class Players extends Component {
     componentDidMount() {
         const self = this;
         playersService.getPlayers().then(function (result) {
-            self.setState({ players: result.data, nextPageURL: result.nextlink})
+            self.setState({ players: result.data, nextPageURL: result.nextlink, prevPageURL: result.prevlink})
         });
     }
 
@@ -27,14 +27,14 @@ class Players extends Component {
     nextPage(){
         const self = this;
         playersService.getPlayersByURL(this.state.nextPageURL).then((result) => {
-            self.setState({ players: result.data, nextPageURL: result.nextlink})
+            self.setState({ players: result.data, nextPageURL: result.nextlink, prevPageURL: result.prevlink})
         });
     }
 
     prevPage(){
         const self = this;
         playersService.getPlayersByURL(this.state.prevPageURL).then((result) => {
-            self.setState({ players: result.data, prevPageURL: result.prevlink})
+            self.setState({ players: result.data, nextPageURL: result.nextlink, prevPageURL: result.prevlink})
         });
     }
 

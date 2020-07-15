@@ -19,7 +19,7 @@ class News extends Component {
     componentDidMount() {
         const self = this;
         teamsService.getTeams().then(function (result) {
-            self.setState({ teams: result.data, nextPageURL: result.nextlink})
+            self.setState({ teams: result.data, nextPageURL: result.nextlink, prevPageURL: result.prevlink})
         });
     }
 
@@ -27,14 +27,14 @@ class News extends Component {
     nextPage(){
         const self = this;
         teamsService.getTeamsByURL(this.state.nextPageURL).then((result) => {
-            self.setState({ teams: result.data, nextPageURL: result.nextlink})
+            self.setState({ teams: result.data, nextPageURL: result.nextlink, prevPageURL: result.prevlink})
         });
     }
 
     previousPage(){
         const self = this;
         teamsService.getTeamsByURL(this.state.previousPageURL).then((result) => {
-            self.setState({ teams: result.data, previousPageURL: result.previouslink})
+            self.setState({ teams: result.data, nextPageURL: result.nextlink, prevPageURL: result.prevlink})
         });
     }
 

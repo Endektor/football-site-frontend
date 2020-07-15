@@ -22,21 +22,21 @@ class News extends Component {
     componentDidMount() {
         const self = this;
         tournamentsService.getTournaments().then(function (result) {
-            self.setState({ tournaments: result.data, nextPageURL: result.nextlink})
+            self.setState({ tournaments: result.data, nextPageURL: result.nextlink, prevPageURL: result.prevlink})
         });
     }
 
     nextPage(){
         const self = this;
         tournamentsService.getTournamentsByURL(this.state.nextPageURL).then((result) => {
-            self.setState({ tournaments: result.data, nextPageURL: result.nextlink})
+            self.setState({ tournaments: result.data, nextPageURL: result.nextlink, prevPageURL: result.prevlink})
         });
     }
 
     previousPage(){
         const self = this;
         tournamentsService.getTournamentsByURL(this.state.previousPageURL).then((result) => {
-            self.setState({ tournaments: result.data, previousPageURL: result.previouslink})
+            self.setState({ tournaments: result.data, nextPageURL: result.nextlink, prevPageURL: result.prevlink})
         });
     }
 

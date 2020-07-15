@@ -10,16 +10,16 @@ class News extends Component {
         this.state = {
             posts: [],
             nextPageURL: '',
-            previousPageURL: ''
+            prevPageURL: ''
         };
         this.nextPage = this.nextPage.bind(this);
-        this.previousPage = this.previousPage.bind(this);
+        this.prevPage = this.prevPage.bind(this);
     }
 
     componentDidMount() {
         const self = this;
         postsService.getPosts().then(function (result) {
-            self.setState({ posts: result.data, nextPageURL: result.nextlink})
+            self.setState({ posts: result.data, nextPageURL: result.nextlink, prevPageURL: result.prevlink})
         });
     }
 
@@ -27,14 +27,14 @@ class News extends Component {
     nextPage(){
         const self = this;
         postsService.getPostsByURL(this.state.nextPageURL).then((result) => {
-            self.setState({ posts: result.data, nextPageURL: result.nextlink})
+            self.setState({ posts: result.data, nextPageURL: result.nextlink, prevPageURL: result.prevlink})
         });
     }
 
-    previousPage(){
+    prevPage(){
         const self = this;
-        postsService.getPostsByURL(this.state.previousPageURL).then((result) => {
-            self.setState({ posts: result.data, previousPageURL: result.previouslink})
+        postsService.getPostsByURL(this.state.prevPageURL).then((result) => {
+            self.setState({ posts: result.data, nextPageURL: result.nextlink, prevPageURL: result.prevlink})
         });
     }
 
@@ -50,7 +50,7 @@ class News extends Component {
                         <p>{post.createdAt}</p>
                     </div>
                 )}
-                <button onClick={ this.previousPage }>Previous</button>
+                <button onClick={ this.prevPage }>Previous</button>
                 <button onClick={ this.nextPage }>Next</button>
             </div>
         );
