@@ -44,13 +44,15 @@ class Players extends Component {
             <div>
                 {this.state.players.map( player =>
                     <div key={player.id}>
-                        <a href={"/players/" + player.id}>Профиль</a>
+                        <a href={'/players/' + player.id}>Профиль</a>
                         <p>ID игрока: {player.id}</p>
                         <p>Имя: {player.first_name}</p>
                         <p>Фамилия: {player.last_name}</p>
                         <p>Позиция: {player.position}</p>
+                        <img src={player.img} alt='Аватар'/>
                     </div>
                 )}
+                {console.log(this.state)}
                 <button onClick={ this.prevPage }>Previous</button>
                 <button onClick={ this.nextPage }>Next</button>
             </div>

@@ -5,7 +5,6 @@ const Membership = (props) => {
 
         return (
             <div>
-                {console.log(props)}
                 <p>количество игр: {props.state.games_amount}</p>
                 <p>победы: {props.state.wins_amount}</p>
                 <p>ничьи: {props.state.draws_amount}</p>

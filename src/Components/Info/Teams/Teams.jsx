@@ -53,10 +53,10 @@ class News extends Component {
                         <p>ничьи: {team.draws_amount}</p>
                         <p>поражения: {team.defeats_amount}</p>
                         <p>инфомация: {team.description}</p>
-                        {console.log(team)}
 
                     </div>
                 )}
+                {console.log(this.state)}
                 <button onClick={ this.previousPage }>Previous</button>
                 <button onClick={ this.nextPage }>Next</button>
             </div>

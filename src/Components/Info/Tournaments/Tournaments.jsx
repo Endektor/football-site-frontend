@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import TournamentsService from '../../Services/TournamentsService.js';
-import TeamsService from '../../Services/TeamsService.js';
+import MatchesService from '../../Services/MatchesService.js';
 import Membership from "../Membership/Membership";
 
 const tournamentsService = new TournamentsService();
+const matchesService = new MatchesService();
 
 
 class News extends Component {
@@ -12,6 +13,7 @@ class News extends Component {
         super(props);
         this.state = {
             tournaments: [],
+            matches: [],
             nextPageURL: '',
             previousPageURL: ''
         };
@@ -23,6 +25,9 @@ class News extends Component {
         const self = this;
         tournamentsService.getTournaments().then(function (result) {
             self.setState({ tournaments: result.data, nextPageURL: result.nextlink, prevPageURL: result.prevlink})
+        });
+        matchesService.getMatches().then(function (result) {
+            self.setState({ matches: result.data})
         });
     }
 
@@ -52,17 +57,16 @@ class News extends Component {
                         <p>id турнира: {tournament.id}</p>
                         <p>название турнира: {tournament.name}</p>
                         {tournament.members.map((team, index) =>
-                            <div>
+                            <div key={tournament.id*100 + team.id}>
                                 <hr/>
                                 <p>название команды: {team.name}</p>
                                 <Membership state={tournament.member_detail[index]}/>
 
                             </div>
                         )}
-
-                        {console.log(tournament)}
                     </div>
                 )}
+                {console.log(this.state)}
                 <button onClick={this.previousPage}>Previous</button>
                 <button onClick={this.nextPage}>Next</button>
             </div>
