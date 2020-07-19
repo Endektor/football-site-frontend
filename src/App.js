@@ -21,8 +21,9 @@ function App() {
             <Route path='/players' exact render={ () => <Players/>}/>
             <Route path='/players/:id' component={Player}  />
             <Route path='/teams' exact render={ () => <Teams/>}/>
-            <Route path='/teams/:id' component={Team}  />
-            <Route path='/tournaments' render={ () => <Tournaments/>}/>
+            <Route path='/teams/:id' component={Team}/>
+            <Route path='/tournaments' exact render={ () => <Tournaments/>}/>
+            <Route path='/tournaments/:id' component={Tournaments}/>
             <Route path='/contacts' render={ () => <Contacts/>}/>
             <Route path='/request' render={ () => <Request/>}/>
             <Route path='/rules' render={ () => <Rules/>}/>

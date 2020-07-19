@@ -29,7 +29,7 @@ class Players extends Component {
                 <p>Фамилия: {this.state.player.last_name}</p>
                 <p>Позиция: {this.state.player.position}</p>
                 <p>Другая информация</p>
-                {console.log(this.state.player)}
+                {console.log(this)}
             </div>
         );
     }
