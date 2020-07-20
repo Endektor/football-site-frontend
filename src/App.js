@@ -11,6 +11,7 @@ import Contacts from './Components/Contacts/Contacts.jsx'
 import Request from './Components/Request/Request.jsx'
 import Rules from './Components/Rules/Rules.jsx'
 import './App.css';
+import Footer from "./Components/Footer/Footer";
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
             <Route path='/contacts' render={ () => <Contacts/>}/>
             <Route path='/request' render={ () => <Request/>}/>
             <Route path='/rules' render={ () => <Rules/>}/>
+            <Footer/>
         </div>
     );
 }

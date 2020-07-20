@@ -1,0 +1,263 @@
+body {
+    font-size: 18px; 
+    margin: 0;
+    box-sizing: border-box;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+/*--------------------------------Шапка------------------------------*/
+.header {
+    /*background-color: RGB(213, 48, 60, 1);*/
+    /*background-color: #000;*/
+    background-color: #2a2a2a;
+    /*background-color: #C51D34;*/
+    /*background: linear-gradient(to bottom right,  #008080, #53377A);*/
+    /*background: linear-gradient(to bottom right,  #E1CC4F, #F80000);*/
+    height: 52px;
+    padding: 0 10px;
+    color: #CCC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.league {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+}
+.mainLogo {
+    width: 50px;
+}
+.connect {
+    width: 33%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.srcIcons {
+    display: flex;
+    justify-content: space-evenly;
+}
+.srcIcons a {
+    padding: 0 5px;
+}
+.contacts {
+    color: #CCC;
+    text-decoration: underline;
+    transition: all 0.2s ease;
+    padding: 0 10px;
+}
+.contacts:hover {
+    color: #fff;
+}
+.leagueName {
+    padding-left: 15px;
+    font-size: 30px;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+}
+.active {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.navBtn {
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center; 
+    color: #CCC;
+    padding: 13px 15px;
+    transition: all 0.4s ease;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+
+}
+.navBtn:hover {
+    color: white;
+    border-bottom: 4px solid #0078f2;
+}
+
+/*--------------------------------Новости------------------------------------------*/
+.mainBg {
+    background-color: #121212;
+    padding: 0 0 10px;
+}
+.newsBackground {
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    text-align: center;
+}
+.news {
+    margin: 10px 0 0;
+    width: 100%;
+    background-color: white;
+    border: 2px solid black;
+}
+.post {
+    display: flex;
+    position: relative;
+    border: 2px solid black;
+    margin: 10px;
+}
+.postImage {
+    width: 60%;
+    min-height: 475px;
+    display: flex;
+    align-items: center;
+    background-color: #121212;
+}
+.postImage img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.postContent {
+    width: 40%;
+    border-left: 2px solid black;
+    color: #CCC;
+    background-color: #2a2a2a;
+}
+.postHeader {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2A2A2A;
+    padding: 15px 10px;
+}
+.postTitle {
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+}
+.postDate {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.postText {
+    padding:  10px;
+    
+}
+.modalBtn {
+    color: #CCC;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px 15px;
+    transition: all 0.2s ease;
+}
+.modalBtn:hover {
+    color: white;
+    background-color: #2a2a2a;
+}
+
+/*-------------------Модальное окно---------------------------*/
+.modalDialog {
+	position: fixed;
+	top: -100px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	transition: opacity 400ms ease-in;
+	display: none;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	display: block;
+	pointer-events: auto;
+}
+
+.modalPost {
+
+	width: 960px;
+	position: relative;
+	margin: 10% auto;
+	/*border-radius: 10px 10px 0 0;*/
+    background-color: #2a2a2a;
+    color: white;
+}
+.modalTitle {
+    margin: 0;
+    padding: 5px;
+    border-bottom: 2px solid black;
+    background-color: #121212;
+    color: #CCC;
+    /*border-radius: 10px 10px 0 0;*/   
+    text-align: center;
+}
+.modalContent {
+    padding: 5px;
+    font-size: 16px;
+    max-height: 450px;
+    overflow-y: auto;
+}
+.modalImage {
+    padding: 10px;
+    text-align: center;
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 12px;
+    box-shadow: 1px 1px 3px #000;
+    transition: all 0.2s ease;
+}
+
+.close:hover { background: #b13232; }
+
+/*-----------------------footer---------------------*/
+.footerContainer {
+    background-color: #000;
+    color: #fff;
+}
+.footer {
+    width: 75%;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nameContact {
+    padding: 50px 0;
+}
+.address {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.addressMap {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+}

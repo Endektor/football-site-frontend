@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PostsService from '../Services/PostsService';
+import Slides from './../Slides/Slides.jsx';
+import './News.css';
 
 const postsService = new PostsService();
 
@@ -38,20 +40,62 @@ class News extends Component {
         });
     }
 
-    render() {
+    makeItEasy(arr){
+        let temp_posts = arr.map
+        return temp_posts;
+    }
 
+    render() {
+        let temp_posts = this.makeItEasy(this.state.posts)
+        console.log(temp_posts)
         return (
             <div>
+                {console.log(temp_posts)}
+                {/*<Slides/>*/}
                 {this.state.posts.map( post =>
                     <div key={post.id}>
-                        <p>{post.id}</p>
-                        <p>{post.title}</p>
-                        <p>{post.text}</p>
-                        <p>{post.createdAt}</p>
+                        {console.log(post)}
+                        <div className="mainBg">
+                            <div className="container">
+                                <div className="newsBackground">
+                                    Новости
+                                </div>
+                                <div className="post">
+                                    <div className="postImage">
+                                        <img src={post.logo} alt="postImage"/>
+                                    </div>
+                                    <div className="postContent">
+                                        <div className="postHeader">
+                                            <div className="postTitle">
+                                                {post.title}
+                                            </div>
+                                            <div className="postDate">
+                                                {post.createdAt}
+                                            </div>
+                                        </div>
+                                        <div className="postText">
+                                            {post.text}
+                                        </div>
+                                    </div>
+                                    <a href="#openModal" className="modalBtn">
+                                        Подробнее
+                                    </a>
+                                    <div id="openModal" className="modalDialog">
+                                        <div className="modalPost">
+                                            <a href="#close" title="Закрыть" className="close">X</a>
+                                            <h2 className="modalTitle">{post.title}</h2>
+                                            <div className="modalContent">{post.text}</div>
+                                            <div className="modalImage"><img src={post.img} alt="newsImage"/></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button onClick={ this.prevPage }>Previous</button>
+                            <button onClick={ this.nextPage }>Next</button>
+                        </div>
                     </div>
                 )}
-                <button onClick={ this.prevPage }>Previous</button>
-                <button onClick={ this.nextPage }>Next</button>
             </div>
         );
     }

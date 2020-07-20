@@ -1,0 +1,158 @@
+body {
+    font-size: 18px; 
+    margin: 0;
+    box-sizing: border-box;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+textarea {
+    outline: none;
+    border: none;
+    resize: none;
+    overflow-y: hidden;
+}
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.navbar {
+    height: 70px;
+    background-color: #000;
+    color: #fff;
+}
+.mainBg {
+    background-color: #121212;
+}
+
+/*---------------------------------Страница турнира---------------------------------------*/
+
+.tournament {
+    border: 1px solid black;
+}
+.tournamentHeader {
+    margin: 0;
+    /*border-left: 7px solid rgb(241, 70, 70);*/
+    background-color: #2a2a2a;
+    padding: 10px;
+    color: #e7e7e7;
+}
+.tournamentTable {
+    border-top: 1px solid black;
+    background-color: #fff;
+}
+.tableRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    align-items: center;
+    
+}
+.tableRow:last-child {
+    border: none;
+}
+.place {
+    width: 20px;
+    text-align: center;
+}
+.team {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.teamName {
+    padding-left: 5px;
+}
+.index {
+    width: 70%;
+}
+.index ul {
+    display: flex;
+    justify-content: space-around;
+}
+.index ul li {
+    width: 112px;
+    text-align: center;
+}
+.score {
+    width: 112px;
+    padding: 0;
+    background-color: transparent;
+    text-align: center;
+    color: black;
+}
+.scoreTour {
+    width: 30px;
+    padding: 0;
+    background-color: transparent;
+    text-align: center;
+    color: black;
+}
+.tours {
+    border: 1px solid black;
+    margin-top: 30px;
+}
+
+.teamLogo {
+    width: 32px;
+    /*border-radius: 100px;*/
+}
+
+.matchTable {
+    border-top: 1px solid black;
+    background-color: rgb(255, 255, 255);
+}
+.matchRow {
+    display: flex;
+    justify-content: space-between;
+}
+.matchDate {
+    width: 10%;
+    text-align: center;
+}
+.match {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.matchTour {
+    text-align: center;
+    width: 100px;
+}
+.matchMedia {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.protocols {
+    width: 45%;
+    text-align: center;
+}
+.match img {
+    padding: 0 5px;
+}
+.matchPhoto {
+    text-align: center;
+    width: 45%;
+    /*background-color: #E23C4A;*/
+    background-color: #2a2a2a;
+    color: #e7e7e7;
+    padding: 5px 0;
+    transition: all 0.2s ease;
+}
+.matchPhoto:hover {
+    color: #fff;
+    background-color: #505050;
+}
