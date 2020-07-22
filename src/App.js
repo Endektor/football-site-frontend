@@ -12,6 +12,8 @@ import Request from './Components/Request/Request.jsx'
 import Rules from './Components/Rules/Rules.jsx'
 import './App.css';
 import Footer from "./Components/Footer/Footer";
+import page_404 from "./Components/404/404";
+import { BrowserRouter as Router, withRouter } from "react-router-dom";
 
 function App() {
     return (

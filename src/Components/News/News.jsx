@@ -52,14 +52,15 @@ class News extends Component {
             <div>
                 {console.log(temp_posts)}
                 {/*<Slides/>*/}
+                <div className="mainBg">
+                    <div className="container">
+                        <div className="newsBackground">
+                            Новости
+                        </div>
                 {this.state.posts.map( post =>
                     <div key={post.id}>
                         {console.log(post)}
-                        <div className="mainBg">
-                            <div className="container">
-                                <div className="newsBackground">
-                                    Новости
-                                </div>
+
                                 <div className="post">
                                     <div className="postImage">
                                         <img src={post.logo} alt="postImage"/>
@@ -78,7 +79,7 @@ class News extends Component {
                                         </div>
                                     </div>
                                     <a href="#openModal" className="modalBtn">
-                                        Подробнее
+                                        Узнать больше →
                                     </a>
                                     <div id="openModal" className="modalDialog">
                                         <div className="modalPost">
@@ -89,13 +90,19 @@ class News extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                    </div>
 
-                            <button onClick={ this.prevPage }>Previous</button>
-                            <button onClick={ this.nextPage }>Next</button>
+                )}
+                        <div className="navButtons" onClick={ this.prevPage }>
+                            <button className="newsBtn">
+                                Предыдущая страница
+                            </button>
+                            <button className="newsBtn" onClick={ this.nextPage }>
+                                Следующая страница
+                            </button>
                         </div>
                     </div>
-                )}
+                </div>
             </div>
         );
     }

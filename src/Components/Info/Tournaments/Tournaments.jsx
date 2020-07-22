@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import TournamentsService from '../../Services/TournamentsService.js';
 import './Tournaments.css';
-import vk_img from './vk.png';
-import bar_img from './123.png';
 
 
 const tournamentsService = new TournamentsService();

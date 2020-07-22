@@ -1,0 +1,51 @@
+body{
+    background: #121212;
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat",sans-serif;
+}
+
+.error {
+    background-color: #121212;
+}
+
+.errorContainer{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #e7e7e7;
+}
+
+.errorContainer h1{
+    font-size: 250px;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 20px;
+    /*background: url(pitch.jpg) center no-repeat;*/
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.errorContainer h2 {
+    font-size: 36px;
+    margin-top: 20vh;
+}
+.errorContainer a{
+    margin: 0 auto;
+    text-decoration: none;
+    background: #e55039aa;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+}
+.errorContainer p {
+    font-size: 24px;
+}
+.errorContainer a:hover{
+    background: #e55039;
+}
