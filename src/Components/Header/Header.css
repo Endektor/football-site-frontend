@@ -88,9 +88,157 @@ a {
     transition: all 0.4s ease;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
-
+    white-space: nowrap;
 }
 .navBtn:hover {
     color: white;
     border-bottom: 4px solid #0078f2;
+}
+
+/*-------------------------Адаптивность-------------------------*/
+@media (min-width: 1200px) and (max-width:1439px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /*-------------------------navbar-------------------------*/
+    .header {
+        font-size: 14px;
+    }
+    .league {
+        max-width: 30%;
+    }
+    .leagueName {
+        font-size: 24px;
+    }
+    .connect {
+        max-width: 25%;
+    }
+    .navBtn {
+        font-size: 12px;
+        padding: 13px 10px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /*-------------------------navbar-------------------------*/
+    .header {
+        font-size: 14px;
+    }
+    .league {
+        max-width: 10%;
+    }
+    .leagueName {
+        display: none;
+
+    }
+    .connect {
+        max-width: 35%;
+    }
+    .navBtn {
+        font-size: 12px;
+        padding: 13px 10px;
+    }
+    .navBtn:hover {
+        border:none;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 767px) {
+    /*-------------------------navbar-------------------------*/
+    .header {
+        font-size: 14px;
+    }
+    .league {
+        max-width: 10%;
+    }
+    .leagueName {
+        display: none;
+
+    }
+    .connect {
+        min-width: 35%;
+    }
+    .navBtn {
+        font-size: 10px;
+        padding: 13px 10px;
+    }
+    .contacts {
+        font-size: 12px;
+    }
+    .navBtn:hover {
+        border:none;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 649px) {
+    /*-------------------------navbar-------------------------*/
+    .header {
+        flex-direction: column;
+        padding: 0;
+        font-size: 14px;
+        height: 100%;
+    }
+    .league {
+        width: max-content;
+        margin: auto;
+        padding-top: 5px;
+    }
+    .active {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .connect {
+        width: 100%;
+        justify-content: center;
+    }
+    .navBtn {
+        font-size: 12px;
+        padding: 13px 10px;
+    }
+    .contacts:first-child {
+        color: black;
+    }
+    .navBtn:hover {
+        border:none;
+    }
+}
+@media (max-width: 479px) {
+    /*-------------------------navbar-------------------------*/
+    .header {
+        flex-direction: column;
+        padding: 0;
+        font-size: 14px;
+        height: 100%;
+    }
+    .league {
+        width: max-content;
+        margin: auto;
+        padding-top: 5px;
+    }
+    .leagueName {
+        font-size: 24px;
+    }
+    .active {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .navBtn {
+        font-size: 10px;
+        padding: 13px 5px;
+    }
+    .modalBtn {
+        font-size: 14px;
+    }
+    .connect {
+        width: 100%;
+        justify-content: center;
+    }
+    .contacts:first-child {
+        color: black;
+    }
+    .navBtn:hover {
+        border:none;
+    }
 }

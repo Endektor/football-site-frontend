@@ -26,3 +26,101 @@
     height: 450px;
     margin-bottom: 10px;
 }
+
+/*-------------------------Адаптивность-------------------------*/
+@media (min-width: 1200px) and (max-width:1439px) {
+    .footer {
+        width: 100%;
+        margin: auto;
+        font-size: 14px;
+        justify-content: space-evenly;
+        padding: 10px 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /*-------------------------footer-------------------------*/
+    .footer {
+        width: 100%;
+        margin: auto;
+        font-size: 14px;
+        justify-content: space-evenly;
+        padding: 0 0 10px;
+    }
+    .address {
+        min-width: 60%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /*-------------------------footer-------------------------*/
+    .footer {
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        font-size: 14px;
+        padding: 0 0 10px;
+    }
+    .address {
+        padding: 10px;
+        min-width: 97%;
+    }
+    .nameContact {
+        padding: 10px 0;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 767px) {
+    /*-------------------------footer-------------------------*/
+    .footer {
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        font-size: 14px;
+        padding: 0 0 10px;
+    }
+    .address {
+        padding: 10px;
+        min-width: 97%;
+    }
+    .nameContact {
+        padding: 10px 0;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 649px) {
+    /*-------------------------footer-------------------------*/
+    .footer {
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        font-size: 14px;
+        padding: 0 0 10px;
+    }
+    .address {
+        padding: 10px 0;
+        min-width: 97%;
+    }
+    .nameContact {
+        padding: 10px 0;
+    }
+}
+@media (max-width: 479px) {
+    /*-------------------------footer-------------------------*/
+    .footer {
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        font-size: 12px;
+        padding: 0 0 10px;
+    }
+    .footer div {
+        padding: 5px;
+    }
+    .address {
+        padding: 10px 0;
+        min-width: 97%;
+    }
+    .addressMap {
+        height: 350px;
+    }
+}

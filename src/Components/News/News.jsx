@@ -78,17 +78,17 @@ class News extends Component {
                                             {post.text}
                                         </div>
                                     </div>
-                                    <a href="#openModal" className="modalBtn">
+                                    <a href={post.url} className="modalBtn">
                                         Узнать больше →
                                     </a>
-                                    <div id="openModal" className="modalDialog">
-                                        <div className="modalPost">
-                                            <a href="#close" title="Закрыть" className="close">X</a>
-                                            <h2 className="modalTitle">{post.title}</h2>
-                                            <div className="modalContent">{post.text}</div>
-                                            <div className="modalImage"><img src={post.img} alt="newsImage"/></div>
-                                        </div>
-                                    </div>
+                                    {/*<div id="openModal" className="modalDialog">*/}
+                                    {/*    <div className="modalPost">*/}
+                                    {/*        <a href="#close" title="Закрыть" className="close">X</a>*/}
+                                    {/*        <h2 className="modalTitle">{post.title}</h2>*/}
+                                    {/*        <div className="modalContent">{post.text}</div>*/}
+                                    {/*        <div className="modalImage"><img src={post.img} alt="newsImage"/></div>*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
                                 </div>
                     </div>
 
