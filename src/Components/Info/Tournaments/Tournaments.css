@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     /*font-family: 'Roboto', sans-serif;*/
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -155,4 +156,217 @@ textarea {
 .matchPhoto:hover {
     color: #fff;
     background-color: #505050;
+}
+
+/*------------------------------------Адаптив------------------------------------*/
+@media (min-width: 1200px) and (max-width:1439px) {
+    .container {
+        width: 100%;
+    }
+    .index ul li {
+        width: 100px;
+        font-size: 16px;
+    }
+    .score {
+        width: 100px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        width: 100%;
+    }
+    .index {
+        width: max-content;
+    }
+    .index ul li {
+        width: 100px;
+        font-size: 16px;
+    }
+    .score {
+        width: 100px;
+    }
+    .team {
+        width: 15%;
+    }
+    .matchDate {
+        white-space: nowrap;
+        width: 11%;
+    }
+    .matchMedia {
+        width: 25%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 100%;
+    }
+    .tournamentHeader {
+        font-size: 24px;
+    }
+    .tournamentTable {
+        font-size: 14px;
+    }
+    .index {
+        width: max-content;
+
+    }
+    .index ul li {
+        width: 50px;
+        font-size: 14px;
+        margin: 0 5px;
+    }
+    .score {
+        width: 50px;
+    }
+    .team {
+        width: 25%;
+    }
+    .tours {
+        font-size: 14px;
+    }
+    .matchDate {
+        white-space: nowrap;
+        width: 11%;
+    }
+    .matchMedia {
+        width: 25%;
+    }
+}
+@media (min-width: 650px) and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+    .tournamentHeader {
+        font-size: 24px;
+    }
+    .tournamentTable {
+        font-size: 14px;
+    }
+    .index {
+        width: max-content;
+
+    }
+    .index ul li {
+        width: 50px;
+        font-size: 14px;
+        margin: 0 5px;
+    }
+    .score {
+        width: 50px;
+    }
+    .team {
+        width: 20%;
+    }
+    .tours {
+        font-size: 14px;
+    }
+    .matchDate {
+        white-space: nowrap;
+        width: 11%;
+    }
+    .matchMedia {
+        width: 30%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 649px) {
+    .container {
+        width: 100%;
+    }
+    .tournamentHeader {
+        font-size: 20px;
+    }
+    .tournamentTable {
+        font-size: 12px;
+    }
+    .index {
+        width: max-content;
+
+    }
+    .index ul li {
+        width: 43px;
+        font-size: 12px;
+    }
+    .score {
+        width: 43px;
+    }
+    .team {
+        width: 20%;
+    }
+    .team img{
+        width: 24px;
+    }
+    .tours {
+        font-size: 12px;
+    }
+    .teamLogo{
+        width: 24px;
+    }
+    .matchDate {
+        white-space: nowrap;
+        width: 15%;
+    }
+    .matchMedia {
+        width: 20%;
+    }
+    .protocols {
+        width: max-content;
+    }
+    .protocols:last-child {
+        display: none;
+    }
+    .matchPhoto {
+        padding: 5px;
+        width: max-content;
+    }
+    .matchPhoto:last-child {
+        display: none;
+    }
+}
+@media (max-width: 479px) {
+    .container {
+        width: 100%;
+    }
+    .tournamentHeader {
+        font-size: 18px;
+    }
+    .tournamentTable {
+        font-size: 12px;
+    }
+    .index {
+        width: max-content;
+    }
+    .index ul li {
+        width: 25px;
+        font-size: 12px;
+    }
+    .score {
+        width: 25px;
+    }
+    .team {
+        width: max-content;
+    }
+    .team img{
+        width: 16px;
+    }
+    .tours {
+        font-size: 12px;
+    }
+    .match {
+        width: 30%;
+    }
+    .teamLogo{
+        width: 16px;
+    }
+    .matchTour {
+        display: none;
+    }
+    .matchDate {
+        white-space: nowrap;
+        width: 25%;
+    }
+    .matchMedia {
+        width: 50%;
+    }
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import TournamentsService from '../../Services/TournamentsService.js';
 import './Tournaments.css';
-
+import vk_img from './vk.png';
+import './script.js';
 
 const tournamentsService = new TournamentsService();
 
@@ -63,12 +64,13 @@ class News extends Component {
         });
     }
 
-
     render() {
         if(this.state.tournaments.tour) {
 
             let temp_member_detail = this.makeTableSort(this.state.tournaments.member_detail);
             this.state.tournaments.tour.reverse();
+
+            let self = this;
 
             return (
                 <div>
@@ -84,14 +86,14 @@ class News extends Component {
                                     <div className="team">Команда</div>
                                     <div className="index">
                                         <ul>
-                                            <li>Игры</li>
-                                            <li>Победы</li>
-                                            <li>Ничьи</li>
-                                            <li>Поражения</li>
-                                            <li>Забито</li>
-                                            <li>Пропущено</li>
-                                            <li>Разница</li>
-                                            <li>Очки</li>
+                                            <li>И</li>
+                                            <li>В</li>
+                                            <li>Н</li>
+                                            <li>П</li>
+                                            <li>ГЗ</li>
+                                            <li>ГП</li>
+                                            <li>Р</li>
+                                            <li>О</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -102,27 +104,19 @@ class News extends Component {
                                         <div className="place">{count + 1}</div>
                                         <div className="team">
                                             <img src={team_str.team.img} className="teamLogo" alt="teamLogo"/>
+                                            {/*<img src={vk_img} className="teamLogo" alt="teamLogo"/>*/}
                                             <div className="teamName">{team_str.team.name}</div>
                                         </div>
                                         <div className="index">
                                             <ul>
-                                                <li><div className="score" placeholder="1" name="object" id="" cols="1"
-                                                              rows="1">{team_str.wins_amount + team_str.draws_amount + team_str.defeats_amount}</div></li>
-                                                <li><div className="score" placeholder="1" name="object" id="" cols="1"
-                                                         rows="1">{team_str.wins_amount}</div></li>
-                                                <li><div className="score" placeholder="1" name="object" id="" cols="1"
-                                                         rows="1">{team_str.draws_amount}</div></li>
-                                                <li><div className="score" placeholder="1" name="object" id="" cols="1"
-                                                         rows="1">{team_str.defeats_amount}</div></li>
-                                                <li><div className="score" placeholder="1" name="object" id="" cols="1"
-                                                         rows="1">{team_str.goals_amount}</div></li>
-                                                <li><div className="score" placeholder="1" name="object" id="" cols="1"
-                                                         rows="1">{team_str.miss_amount}</div></li>
-                                                <li><div className="score" placeholder="1" name="object" id="" cols="1"
-                                                         rows="1">{team_str.difference}</div></li>
-
-                                                <li><div className="score" placeholder="1" name="object" id="" cols="1"
-                                                         rows="1">{team_str.score}</div></li>
+                                                <li><div className="score">{team_str.wins_amount + team_str.draws_amount + team_str.defeats_amount}</div></li>
+                                                <li><div className="score">{team_str.wins_amount}</div></li>
+                                                <li><div className="score">{team_str.draws_amount}</div></li>
+                                                <li><div className="score">{team_str.defeats_amount}</div></li>
+                                                <li><div className="score">{team_str.goals_amount}</div></li>
+                                                <li><div className="score">{team_str.miss_amount}</div></li>
+                                                <li><div className="score">{team_str.difference}</div></li>
+                                                <li><div className="score">{team_str.score}</div></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -153,17 +147,16 @@ class News extends Component {
                                 {tour.tour_data.map( match =>
 
                                             <div className="tableRow">
-                                                {console.log(match)}
                                             <div className="matchDate">{match.date}</div>
                                             <div className="match">
                                                 <div className="matchTour">{match.team1.name}</div>
                                                 <img src={match.team1.img} className="teamLogo" alt="teamLogo"/>
-                                                <div className="scoreTour" placeholder="1" name="object" id="" cols="1"
-                                                          rows="1">{match.team1_goals}</div>
+                                                {/*<img src={vk_img} className="teamLogo" alt="teamLogo"/>*/}
+                                                <div className="scoreTour">{match.team1_goals}</div>
                                                 :
-                                                <div className="scoreTour" placeholder="1" name="object" id="" cols="1"
-                                                     rows="1">{match.team2_goals}</div>
+                                                <div className="scoreTour">{match.team2_goals}</div>
                                                 <img src={match.team2.img} className="teamLogo" alt="teamLogo"/>
+                                                {/*<img src={vk_img} className="teamLogo" alt="teamLogo"/>*/}
                                                 <div className="matchTour">{match.team2.name}</div>
                                             </div>
                                             <div className="matchMedia">
