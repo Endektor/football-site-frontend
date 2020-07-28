@@ -55,7 +55,6 @@ class News extends Component {
     }
 
 
-
     componentDidMount() {
         const self = this;
         const { match: { params } } = this.props;
