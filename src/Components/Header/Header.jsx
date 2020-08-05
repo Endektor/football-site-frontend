@@ -27,12 +27,18 @@ class Header extends Component {
         return (
             <div>
                 <div className="header">
-                    <div className="league">
+                   
+		
+		
+		    <div className="league">
                         <img src={mc_img} alt="mainLogo" className="mainLogo"/>
                             <div className="leagueName">
                                 AficionadoLeague
                             </div>
                     </div>
+
+
+
                     <div className="active">
                         <a href="/" className="navBtn">
                             <div href="#" className="navLink">Новости</div>
@@ -47,11 +53,21 @@ class Header extends Component {
                                     </div>
                                 )}
                             </div>
-                        </div>
-                        <a href="https://forms.gle/ysjfyzazvUehjU3h6" className="navBtn" target="_blank">
+                            
+			</div>
+		{/* <a href="http://aficionadoleague.ru/request" className="navBtn">
+                        <div className="request navLink">Оставить заявку</div>
+                    </a>*/}
+
+		<a href="https://forms.gle/ysjfyzazvUehjU3h6" className="navBtn" target="_blank">
                             <div className="request navLink">Оставить заявку</div>
                         </a>
-                    </div>
+                   </div>
+
+
+
+
+
                     <div className="connect">
                         <div className="srcIcons">
                             <a href="https://vk.com/aficionadoleague">
@@ -68,6 +84,11 @@ class Header extends Component {
                             Правила
                         </a>
                     </div>
+
+
+
+
+
                 </div>
             </div>
 
